@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Favourite Meal Recipe</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        h1 {
+            text-align: center;
+            font-weight: 900;
+        }
+
+        .logo {
+            color: coral;
+            font-size: small;
+            float: right;
+            font-weight: 700;
+        }
+        .logo img {
+            border: 1px solid coral;
+            border-radius: 100%;
+            max-width: 100px;
+            max-height: 75px;
+            float: right;
+        }
+
+        hr {
+            position: relative;
+            border-top: 2px solid black;
+        }
+
+        table {
+            border: 1px solid black;
+        }
+        .card1 img {
+			border:1px solid blueviolet;
+            border-radius: 10px;
+            width: 200px;
+            height: 135px
+        }
+        .card2 img {
+            border:1px solid blueviolet;
+            border-radius: 10px;
+            width: 200px;
+            height: 135px;
+        }
+        .card3 img {
+            border:1px solid blueviolet;
+            border-radius: 10px;
+            width: 200px;
+            height: 135px;
+        }
+        .card4 img{
+            border:1px solid blueviolet;
+            border-radius: 10px;
+            width: 200px;
+            height: 135px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div>
+        <span class="logo">
+            <img src="data:image/jpeg;base64,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" alt="logo">
+            ESTHER RECIPES
+        </span>
+        <h1>Pounded Yam and Egusi Soup</h1>
+        <img src="https://desirerecipes.com/wp-content/uploads/2022/02/image-24.jpg.webp" alt="An image of Pounded Yam and Egusi Soup">
+        <h2>Pounded Yam and Egusi Soup Recipe</h2>
+        <p>
+            Pounded yam is a Nigerian food native to the Yoruba, Igbo, Ebira and Tiv ethnic groups.
+            It is a traditional food called Iyan in Yoruba.
+            It is mostly prepared by pounding boiled yam with a mortar and pestle.
+            Pounded yam is similar to mashed potatoes but heavier.
+            It is a smooth and tasty delicacy traditionally eaten with the hands.
+            Iyán is consumed in Ondo State, Ijesha, Edo, Benue and Ekiti in Nigeria, among others.
+            It can be served with egusi, soup, jute leaves soup (ewedu), stewed spinach (efo riro) or okra soup.
+        </p>
+        <p>
+            Egusi soup is a popular soup recipe in the Western part of Africa.
+            The egusi soup is often thickened with ground melon seeds.
+            This soup is best served with pounded yam, fufu or eba.
+            Egusi soup and pounded yam is such a mouthwatering and appetising dish to behold.
+        </p>
+        <hr>
+        <h3>Ingredients</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Ingredients</th>
+                    <th>Quantity</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Yam</td>
+                    <td>1 tuber</td>
+                </tr>
+                <tr>
+                    <td>Egusi/melon seed</td>
+                    <td>2 cup</td>
+                </tr>
+                <tr>
+                    <td>Frozen Spinach thawed</td>
+                    <td>340g</td>
+                </tr>
+                <tr>
+                    <td>Fresh Tomato</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>Fresh Pepper</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td>Stock Cube</td>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <td>Palm Oil</td>
+                    <td>1 cup</td>
+                </tr>
+                <tr>
+                    <td>Boneless Chicken</td>
+                    <td>1 Pound</td>
+                </tr>
+                <tr>
+                    <td>Sliced Onion</td>
+                    <td>1 Medium sized</td>
+                </tr>
+                <tr>
+                    <td>Water</td>
+                    <td>2 cups</td>
+                </tr>
+                <tr>
+                    <td>Dried Shrimp</td>
+                    <td>To taste</td>
+                </tr>
+                <tr>
+                    <td>Dried fish</td>
+                    <td>To taste</td>
+                </tr>
+                <tr>
+                    <td>Salt</td>
+                    <td>To taste</td>
+                </tr>
+                <tr>
+                    <td>Crayfish</td>
+                    <td>To taste</td>
+                </tr>
+            </tbody>
+        </table>
+        <h3>Steps/Direction</h3>
+        <h4>Pounded Yam</h4>
+        <h5>Method 1</h5>
+        <p>Using Mortar and Pestle</p>
+        <ol> 
+            <li>Use a knife to peel the yam. Get rid of any discolorations or spots.</li>
+            <li>Pour into the water and wash off all dirt immediately after cutting into large chunks.</li>
+            <li>Cook the yams under high heat with enough water to cover them.</li>
+            <li>Boil for approximately 20 minutes until tender. Drain yams thoroughly in a colander immediately after removing them from the heat.</li>
+            <li>Clean the mortar and pestle by washing them. Pound yam until smooth and stretchy in a mortar.</li>
+            <li>Add water when necessary while pounding</li>
+            <li>Roll the balls and wrap them in plastic.</li>
+        </ol>
+        
+        <h5>Method 2</h5>
+        <p>Using Blender</p>
+        <ol> 
+            <li>Cut yam into smaller pieces and boiled for about 20 minutes until soft.</li>
+            <li>A food processor or blender can be used to process cooked yams. Process for 20-30 seconds, then pulse to check if they’re smooth.</li>
+            <li>To stretch and soften, add a couple of tablespoons of water at a time.</li>
+            <li>Clean the mortar and pestle by washing them. Pound yam until smooth and stretchy in a mortar.</li>
+            <li>Add water when necessary while pounding</li>
+            <li>Roll the balls, shaped into any size and wrap them in plastic.</li>
+        </ol>
+        <h4>Egusi Soup</h4>
+        <ol>
+            <li>Place chicken and dried fish in a pot after it has been rinsed.</li>
+            <li>Add 1 onion, 2 Maggi cubes, and salt to taste.</li>
+            <li>Add one and a half cups of water to a boil on high heat for 25 minutes. Turn the heat down and simmer for 10 more minutes.</li>
+            <li>Using a blender, puree the fresh pepper, tomatoes and remaining onion. Place onion pepper mixture in a bowl and set aside.</li>
+            <li>To make melon seed powder, place shrimp, crayfish, and melon seeds in a blender. Pulse until powder forms. Transfer to a bowl and set aside.</li>
+            <li>Set the spinach aside after squeezing out the excess liquid.</li>
+            <li>Slightly heat up red oil in a saucepan, stir in onions then add grinded melon seeds.</li>
+            <li>Stir in chicken, onion pepper mixture and continue cooking for 20 more minutes and stir in the spinach.</li>
+            <li>For a final 5 minutes, cover and cook.</li>
+        </ol>
+        <p>
+            Check this out!!!
+        </p>
+        <span>
+            <span class="card1">
+                <img src="pyame.jpeg" alt="Pounded Yam and Egusi">
+            </span>
+            <span class="card2">
+                <img src="pyamo.jpeg" alt="Pounded Yam and Ogbono">
+            </span>
+            <span class="card3">
+                <img src="pyam.jpeg" alt="Pounded Yam and Okro">
+            </span>
+            <span class="card4">
+                <img src="pyamef.jpeg" alt="Pounded Yam and Efo Riro">
+            </span>
+        </span>
+        </div>
+        <hr>
+
+
+        <footer>
+            <p>RATE THIS RECIPE</p>
+            <div class="rate">
+                <input type="radio" id="star1" name="rate" value="1" />
+                <label for="star1">1 star</label>
+                <input type="radio" id="star2" name="rate" value="2" />
+                <label for="star2">2 stars</label>
+                <input type="radio" id="star3" name="rate" value="3" />
+                <label for="star3">3 stars</label>
+                <input type="radio" id="star4" name="rate" value="4" />
+                <label for="star4">4 stars</label>
+                <input type="radio" id="star5" name="rate" value="5" />
+                <label for="star5">5 stars</label>
+              </div>
+        </footer>
+    </div>
+
+</body>
+</html>
